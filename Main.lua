@@ -8,7 +8,7 @@ local function CreateTab(tabInfo)
     TabFrame.Name = tabInfo.Name
     TabFrame.Size = UDim2.new(0, 100, 1, 0)
     TabFrame.Position = UDim2.new(0, #ScreenGui:GetChildren() * 110, 0, 0)
-    TabFrame.BackgroundTransparency = 1
+    TabFrame.BackgroundTransparency = 0
     TabFrame.Parent = ScreenGui
 
     return TabFrame
