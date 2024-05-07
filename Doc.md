@@ -1,6 +1,6 @@
-# Roblox Studio UI Library
+# Roblox UI Library
 
-This is a UI library for Roblox Studio, designed to simplify the creation of tabs, buttons, and notifications in your Roblox games. This library provides easy-to-use functions to generate UI elements and allows for customization of styling and functionality.
+This is a UI library for Roblox, designed to simplify the creation of tabs, buttons, and notifications in your Roblox games. This library provides easy-to-use functions to generate UI elements and allows for customization of styling and functionality.
 
 ## Installation
 Use this command
