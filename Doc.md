@@ -1,45 +1,42 @@
-# Roblox UI Library
+# Library
+With this UI library, you can easily create tabs, buttons, and notifications in your Roblox. Feel free to customize the appearance and behavior of these elements according to your game's requirements.
 
-This is a UI library for Roblox, designed to simplify the creation of tabs, buttons, and notifications in your Roblox games. This library provides easy-to-use functions to generate UI elements and allows for customization of styling and functionality.
-
-## Installation
-Use this command
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AbsurdFacts/AphoonLibrary/main/Main.lua", true))()
-```
-
-## Usage
-
-### Creating Tabs
-
-To create a tab, use the `CreateTab` function with the desired tab name:
+## Example Script
+Here's a simple example script demonstrating how to use the UI library to create tabs, buttons, and notifications:
 
 ```lua
-UI.CreateTab({
-    Name = "TabName"
+-- Load the UI library
+local UiLib = require(game:GetService("ReplicatedStorage").UiLib)
+
+-- Create tabs
+local tab1, tabButton1 = UiLib.CreateTab({
+    Name = "Tab 1"
 })
-```
-### Creating Buttons
+local tab2, tabButton2 = UiLib.CreateTab({
+    Name = "Tab 2"
+})
 
-To create a button you use this:
-
-```lua
-UI.CreateButton({
-    Name = "ButtonName",
-    Tab = "TabName",
-    Callback = function(IsToggled)
-        -- Your button callback logic here
+-- Create buttons inside tabs
+UiLib.CreateButton({
+    Name = "Button 1",
+    Tab = tab1,
+    Callback = function(button)
+        print(button.Name.." clicked!")
     end
 })
-```
-### Notifying the user
 
-To make a notification, use this:
+UiLib.CreateButton({
+    Name = "Button 2",
+    Tab = tab2,
+    Callback = function(button)
+        print(button.Name.." clicked!")
+    end
+})
 
-```lua
-UI.CreateNotification({
-    Name = "NotificationName",
-    Content = "NotificationContent",
-    Duration = 5 -- Duration in seconds (optional)
+-- Create notifications
+UiLib.CreateNotification({
+    Name = "Notification 1",
+    Content = "Hello World!",
+    Duration = 5
 })
 ```
