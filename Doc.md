@@ -1,35 +1,45 @@
-# AphoonLib
-my new uilib
-## Booting it up
-In order to use it u boot it up with this
+# Roblox Studio UI Library
+
+This is a UI library for Roblox Studio, designed to simplify the creation of tabs, buttons, and notifications in your Roblox games. This library provides easy-to-use functions to generate UI elements and allows for customization of styling and functionality.
+
+## Installation
+Use this command
 ```lua
-local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/AbsurdFacts/AphoonLibrary/main/Main.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AbsurdFacts/AphoonLibrary/main/Main.lua", true))()
 ```
-## Making a tab
-To make a tab u use this
+
+## Usage
+
+### Creating Tabs
+
+To create a tab, use the `CreateTab` function with the desired tab name:
+
 ```lua
-local tab1 = UI.CreateTab({
+UI.CreateTab({
     Name = "TabName"
 })
 ```
-## Making a button
-To make a button use this
+### Creating Buttons
+
+To create a button you use this:
+
 ```lua
 UI.CreateButton({
-    Name = "Button 1",
-    Tab = tab1,
-    Callback = function(button)
-        print(button.Name.." clicked!")
+    Name = "ButtonName",
+    Tab = "TabName",
+    Callback = function(IsToggled)
+        -- Your button callback logic here
     end
 })
 ```
-## Making a notification
-Last but not least to make a notification use this
+### Notifying the user
+
+To make a notification, use this:
+
 ```lua
 UI.CreateNotification({
-    Name = "Notification 1",
-    Content = "Hello World!",
-    Duration = 5
+    Name = "NotificationName",
+    Content = "NotificationContent",
+    Duration = 5 -- Duration in seconds (optional)
 })
 ```
-And thats my Ui Library, its new so not that good.
