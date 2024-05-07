@@ -18,7 +18,7 @@ local function CreateButton(buttonInfo)
     local Button = Instance.new("TextButton")
     Button.Name = buttonInfo.Name
     Button.Text = buttonInfo.Name
-    Button.Size = UDim2.new(0, 80, 0, 30)
+    Button.Size = UDim2.new(0, 160, 0, 130)
     Button.Position = UDim2.new(0, 10, 0, #buttonInfo.Tab:GetChildren() * 40)
     Button.Parent = buttonInfo.Tab
 
